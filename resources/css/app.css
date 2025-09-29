@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Quillは .ql-font-<name> クラスを付けるので、対応するfont-familyを用意 */
+.ql-editor .ql-font-sans { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; }
+.ql-editor .ql-font-serif { font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif; }
+.ql-editor .ql-font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; }
+.ql-editor {
+  min-height: 240px;   /* ここに高さを付ける */
+  padding: 0.75rem;    /* ここに余白を付ける */
+}
+
+.post-body .ql-size-small { font-size: 0.875rem; }   /* 14px 相当 */
+.post-body .ql-size-large { font-size: 1.25rem; } 
+/* Quill 出力された h1〜h6 用スタイル */
+h1 {
+  @apply text-4xl font-bold mt-6 mb-4 leading-tight;
+}
+ h2 {
+  @apply text-3xl font-semibold mt-5 mb-3 leading-snug;
+}
+ h3 {
+  @apply text-2xl font-semibold mt-4 mb-2 leading-snug;
+}
+ h4 {
+  @apply text-xl font-medium mt-3 mb-2;
+}
+ h5 {
+  @apply text-lg font-medium mt-2 mb-1;
+}
+ h6 {
+  @apply text-base font-medium mt-2 mb-1 text-gray-600 uppercase;
+}
+
+/* 本文の段落も整える */
+ p {
+  @apply mb-4 leading-relaxed;
+}
+
+/* リスト */
+ ul {
+  @apply list-disc pl-6 mb-4;
+}
+ ol {
+  @apply list-decimal pl-6 mb-4;
+}
+
+/* 引用 */
+ blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic text-gray-600 my-4;
+}
